@@ -45,3 +45,5 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'puma', '2.6.0'
+gem 'carrierwave', "~> 0.9.0"
+gem "devise", "~> 3.1.1"
