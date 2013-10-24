@@ -1,33 +1,40 @@
- <%= link_to 'New Project', new_project_path, class: "btn btn-success" %>
- 
- 
-    <% @projects.each do |project| %>
+ <div id="all_project">
+    <section class="projects cards">
 
-    <div id="all_project">
-      <section class="projects cards">
-        <div class="row">
-            <article class="card">
-              <%= link_to (@project) do %>
-                <h5><%= project.name %></h5>
-                <p><%= project.description %></p>
-                <p><%= project.created_at %></p>
-                <div class="people">
-                  <%= image_tag('avatar.40.gif') %>
-                </div>  
+      <div class="row">
+         
+        <div class="span2">
+          <%= link_to 'New Project', new_project_path, class: "btn btn-success" %>
+        </div>
+        
+        <div class="span10">
+         <% @projects.each do |project| %>  
+          <article class="card">
+           
+
+
+              <%= link_to project do %>
+                <h5 class="project-name"><%= project.name %></h5>
+                <p class="project-description"><%= truncate(project.description, length: 55) %></p>
+                <p class="created-at">
+                  Created <%= "#{time_ago_in_words(project.created_at).gsub('about','')}  ago" %>               
+                </p>
+
+                
+                <p class="updated-at">Last Updated  
+                   
+                    <%= "#{time_ago_in_words(project.updated_at.to_s).gsub('about','')}  ago" %>
+                  
+                </p>
+
+                
+                  <div class="people">
+                    <%= image_tag('avatar.40.gif') %>
+                  </div>  
               <% end %>
             </article>
-          </div>
-      </section>
-
-    </div>
-
-      <tr>
-        <td><%= project.name %></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        
-      </tr>
-    <% end %>
- 
-
-
+           <% end %>    
+        </div>
+      </div>
+    </section>
+  </div> 

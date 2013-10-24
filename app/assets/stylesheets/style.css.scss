@@ -10,31 +10,33 @@ $baseFontFamily: Oxygen;
 @import 'bootstrap';
  
 body {
-        padding-top: 60px;
-        line-height: 21px;
+  padding-top: 60px;
+  line-height: 21px;
 }
 
 
 @import 'bootstrap-responsive';
 
 .navbar-inner {
-        @include box-shadow(none !important);
-        border: none;
+  @include box-shadow(none !important);
+  border: none;
 
 }
 .footer {
-        margin-top: 50px;
-        color: $grayLight;
-        a {
-        color: $gray;
-        }
+  margin-top: 50px;
+  color: $grayLight;
+  a {
+    color: $gray;
+    }
 }
  
 body {
-	background: url("bg.jpg") 0 0 repeat;
+	font-family: "ProximaNova","Helvetica Neue",helvetica,arial,sans-serif;
+  background: url("bg.jpg") 0 0 repeat;
 	background-attachment: fixed;
 	width: 100%;
 	color: #000;
+
 }
 .navbar-inner {
 	background: none;
@@ -51,19 +53,154 @@ body {
 	zoom: 1;
 	background-color: white;
 	padding: 10px;
-
+  min-height: 1024px;
+  margin-bottom: 50px;
 }
 
 #all_projects {
  	margin-left: 150px;
-    margin: 0;
-    padding: 0;
-    clear: none;
-    font-weight: normal;
+  margin: 0;
+  padding: 0;
+  clear: none;
+  font-weight: normal;
+  color: #aa9c84;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0 0 10px;
+}
+.header-menu {
+   position: absolute;
+}
+section.projects.cards article.card p {
+  font-size: 16px;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  color: #aa9c84;
+}
+section.projects.cards article.card {
+  width: 210px;
+  height: 235px;
+  float: left;
+  margin: 0 20px 20px 0;
+  position: relative;
+  text-align: left;
+  background: lightyellow !important;
+  padding: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 6px rgba(0,0,0,0.3);
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+section.projects.cards article.card a.project_card {
+  display: block;
+  height: 100%;
+}
+section.projects.cards a:hover h5 {
+  color: black;
+  font-weight: bold;
+}
+section.projects.cards {
+    text-shadow: none;
+}
+section.projects.cards a:hover {
+    text-decoration: none;
+}
+section.projects.cards div.row {
+    zoom: 1;
+}
+section.projects.cards div.row:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+section.projects.cards article.card a.project_card {
+    display: block;
+    height: 100%
+}
+section.projects.cards article.card:hover {
+    cursor: pointer;
+}
+section.projects.cards article.card h5 {
+    font-size: 19px;
+    margin: 0 0 3px;
+    line-height: 1.1em;
+    word-wrap: break-word;
+}
+section.projects.cards article.card p {
+    font-size: 16px;
+    line-height: 1.2em;
+    word-wrap: break-word;
     color: #aa9c84;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 12px;
-    line-height: 16px;
-    margin: 0 0 10px;
+}
+section.projects.cards article.card div.people {
+    position: absolute;
+    left: 16px;
+    bottom: 15px;
+    zoom: 1;
+}
+section.projects.cards article.card div.people:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+section.projects.cards article.card div.people p {
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+section.projects.cards article.card div.people img.avatar {
+    margin: 0 2px 2px 0 !important;
+    padding: 0;
+    border: 0;
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+section.projects {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+}
+section.projects.cards {
+    zoom: 1;
+}
+section.projects.cards:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+/*
+  div.row {
+    display: inline !important;
+  }
+*/
+div.row:after {
+    content: "" !important;
+    display: inline !important;
+    clear: none !important;
+}
+div.row .card {
+    background-color: #fff !important;
+}
+
+.project-name {
+  color: #000;
+  padding-bottom: 5px;
+}
+.project-description {
+  font-size: 14px;
+}
+.created-at, .updated-at {
+  font-size: 12px !important;
 }

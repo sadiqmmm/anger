@@ -1,0 +1,11 @@
+Resources used in development
+----------------------------------
+http://stackoverflow.com/questions/4116415/preselect-check-box-with-rails-simple-form
+http://stackoverflow.com/questions/3278986/ago-date-time-functions-in-ruby-rails
+http://rails-bestpractices.com/posts/105-not-use-time_ago_in_words
+http://timeago.yarp.com/
+http://stackoverflow.com/questions/3801324/rails-3-time-ago-in-words-says-about-2-hours-ago
+
+
+
+http://js2coffee.org/
