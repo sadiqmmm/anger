@@ -1,29 +1,33 @@
-<h1>Listing projects</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+ <%= link_to 'New Project', new_project_path, class: "btn btn-success" %>
+ 
+ 
     <% @projects.each do |project| %>
+
+    <div id="all_project">
+      <section class="projects cards">
+        <div class="row">
+            <article class="card">
+              <%= link_to (@project) do %>
+                <h5><%= project.name %></h5>
+                <p><%= project.description %></p>
+                <p><%= project.created_at %></p>
+                <div class="people">
+                  <%= image_tag('avatar.40.gif') %>
+                </div>  
+              <% end %>
+            </article>
+          </div>
+      </section>
+
+    </div>
+
       <tr>
         <td><%= project.name %></td>
         <td><%= project.description %></td>
         <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
       </tr>
     <% end %>
-  </tbody>
-</table>
+ 
 
-<br>
 
-<%= link_to 'New Project', new_project_path %>
