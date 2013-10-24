@@ -1,4 +1,8 @@
 Anger::Application.routes.draw do
+  resources :todos
+
+  resources :todo_lists
+
   root to: "projects#index"
   resources :projects
 
