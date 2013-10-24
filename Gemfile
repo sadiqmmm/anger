@@ -44,6 +44,8 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'puma', '2.6.0'
-gem 'carrierwave', "~> 0.9.0"
-gem "devise", "~> 3.1.1"
+gem 'puma', '~> 2.6.0'
+gem 'carrierwave', '~> 0.9.0'
+gem 'devise', '~> 3.1.1'
+gem 'bootstrap-sass', '~> 2.3.2.2'
+gem 'simple_form', '~> 3.0.0'
