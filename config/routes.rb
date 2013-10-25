@@ -1,10 +1,15 @@
 Anger::Application.routes.draw do
-  resources :todos
-
-  resources :todo_lists
-
   root to: "projects#index"
-  resources :projects
+
+  resources :projects do 
+    resources :todo_lists
+  end
+  resources :todo_lists do
+    resources :todos
+  end
+  
+  resources :todos
+  resources :todo_lists
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

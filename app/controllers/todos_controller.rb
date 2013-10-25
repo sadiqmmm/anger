@@ -26,9 +26,11 @@ class TodosController < ApplicationController
   def create
     @todo = Todo.new(todo_params)
 
-    respond_to do |format|
+    @todo.todo_list_id = params[:todo_list_id]
+
+    respond_to do |format|    
       if @todo.save
-        format.html { redirect_to @todo, notice: 'Todo was successfully created.' }
+        format.html { redirect_to todo_list_path(@todo.todo_list), notice: 'Todo was successfully created.' }
         format.json { render action: 'show', status: :created, location: @todo }
       else
         format.html { render action: 'new' }

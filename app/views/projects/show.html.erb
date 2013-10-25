@@ -2,15 +2,24 @@
 	<p id="notice"><%= notice %></p>
 
 	<p>
-	  <strong>Name:</strong>
+	  <strong> 
 	  <%= @project.name %>
+	  </strong>
 	</p>
 
 	<p>
 	  <strong>Description:</strong>
 	  <%= @project.description %>
+	  <%= link_to ' Edit', edit_project_path(@project) %> |
+	  <%= link_to 'Back', projects_path %>
 	</p>
+	<!-- start of todo list //-->
+	<p>Add todolist</p>
+	<%= render partial: 'todo_lists/form' %>
+	
+	<h3>TodoList</h3>
 
-	<%= link_to 'Edit', edit_project_path(@project) %> |
-	<%= link_to 'Back', projects_path %>
+	<%= render partial: 'projects/todo_list', collection: @project.todo_lists %>
+	<!-- end of todo list //-->
+	
 </div>

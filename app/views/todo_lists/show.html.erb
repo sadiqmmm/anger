@@ -7,8 +7,17 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @todo_list.description %>
+  <%= @todo_list.description %> 
+  <%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
+  <%= link_to 'Back', todo_lists_path %>
 </p>
 
-<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-<%= link_to 'Back', todo_lists_path %>
+
+	<!-- start of todo  //-->
+	<p>Add todo</p>
+	<%= render partial: 'todos/form' %>
+	
+	<h3>Todos</h3>
+
+	<%= render partial: 'todo_lists/todo', collection: @todo_list.todos %>
+	<!-- end of todo  //-->

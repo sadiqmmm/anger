@@ -10,6 +10,9 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
+    @todo_list = TodoList.new
+    @todo_list.project_id = @project.id
+
   end
 
   # GET /projects/new

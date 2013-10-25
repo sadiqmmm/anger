@@ -10,6 +10,8 @@ class TodoListsController < ApplicationController
   # GET /todo_lists/1
   # GET /todo_lists/1.json
   def show
+      @todo = Todo.new
+      @todo.todo_list_id = @todo.id
   end
 
   # GET /todo_lists/new
@@ -25,10 +27,11 @@ class TodoListsController < ApplicationController
   # POST /todo_lists.json
   def create
     @todo_list = TodoList.new(todo_list_params)
+    @todo_list.project_id = params[:project_id]
 
     respond_to do |format|
       if @todo_list.save
-        format.html { redirect_to @todo_list, notice: 'Todo list was successfully created.' }
+        format.html { redirect_to project_path(@todo_list.project), notice: 'Todo list was successfully created.' }
         format.json { render action: 'show', status: :created, location: @todo_list }
       else
         format.html { render action: 'new' }
