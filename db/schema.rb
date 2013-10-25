@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131025070954) do
+ActiveRecord::Schema.define(version: 20131025100116) do
 
   create_table "projects", force: true do |t|
     t.string   "name"
@@ -26,13 +26,19 @@ ActiveRecord::Schema.define(version: 20131025070954) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "project_id"
   end
+
+  add_index "todo_lists", ["project_id"], name: "index_todo_lists_on_project_id"
 
   create_table "todos", force: true do |t|
     t.string   "todo_item"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "todo_list_id"
   end
+
+  add_index "todos", ["todo_list_id"], name: "index_todos_on_todo_list_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
