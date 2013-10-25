@@ -12,3 +12,9 @@ http://js2coffee.org/
 
 http://stackoverflow.com/questions/5129598/how-to-link-a-folder-with-an-existing-heroku-app
 git remote add heroku git@heroku.com:project.git
+
+heroku pg:info
+heroku pg:reset DATABASE
+heroku run rake db:migrate
+
+http://ctshryock.com/posts/2012/07/12/running-rails-with-puma-on-heroku.html
