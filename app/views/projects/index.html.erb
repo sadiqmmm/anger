@@ -9,30 +9,30 @@
         
         <div class="span10">
          <% @projects.each do |project| %>  
-          <article class="card">
-           
-
-
-              <%= link_to project do %>
-                <h5 class="project-name"><%= project.name %></h5>
-                <p class="project-description"><%= truncate(project.description, length: 55) %></p>
-                <p class="created-at">
-                  Created <%= "#{time_ago_in_words(project.created_at).gsub('about','')}  ago" %>               
-                </p>
-
+          
+          <%= link_to project do %>
+            <article class="card">
                 
-                <p class="updated-at">Last Updated  
-                   
-                    <%= "#{time_ago_in_words(project.updated_at.to_s).gsub('about','')}  ago" %>
-                  
-                </p>
+              <h5 class="project-name"><%= project.name %></h5>
+              <p class="project-description"><%= truncate(project.description, length: 55) %></p>
+              <p class="created-at">
+                Created <%= "#{time_ago_in_words(project.created_at).gsub('about','')}  ago" %>               
+              </p>
 
+              
+              <p class="updated-at">Last Updated  
+                 
+                  <%= "#{time_ago_in_words(project.updated_at.to_s).gsub('about','')}  ago" %>
                 
-                  <div class="people">
-                    <%= image_tag('avatar.40.gif') %>
-                  </div>  
-              <% end %>
-            </article>
+              </p>
+
+              
+                <div class="people">
+                  <%= image_tag('avatar.40.gif') %>
+                </div>  
+                
+              </article>
+            <% end %>
            <% end %>    
         </div>
       </div>
