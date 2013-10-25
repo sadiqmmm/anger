@@ -1,23 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div class="main">
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @todo_list.title %>
-</p>
+	<p>
+	  <strong>Title:</strong>
+	  <%= @todo_list.title %>
+	</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @todo_list.description %> 
-  <%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-  <%= link_to 'Back', todo_lists_path %>
-</p>
+	<p>
+	  <strong>Description:</strong>
+	  <%= @todo_list.description %> 
+	  <%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
+	  <%= link_to 'Back', todo_lists_path %>
+	</p>
 
 
-	<!-- start of todo  //-->
-	<p>Add todo</p>
-	<%= render partial: 'todos/form' %>
-	
-	<h3>Todos</h3>
+		<!-- start of todo  //-->
+		<p>Add todo</p>
+		<%= render partial: 'todos/form' %>
+		
+		<h3>Todos</h3>
 
-	<%= render partial: 'todo_lists/todo', collection: @todo_list.todos %>
+		<%= render partial: 'todo_lists/todo', collection: @todo_list.todos %>
 	<!-- end of todo  //-->
+</div>
