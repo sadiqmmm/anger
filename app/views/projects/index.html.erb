@@ -20,9 +20,9 @@
               <p class="project-description"><%= truncate(project.description, length: 75) %></p>
 
               <p class="due-on">Due On  
-                 
+                 <% if project.due_on %>
                   <%= "#{project.due_on.strftime("%B %d, %Y")}" %>  
-                
+                <% end %>
               </p>
               <p class="created-at">
                 Created <%= "#{time_ago_in_words(project.created_at).gsub('about','')}  ago" %>               
