@@ -7,5 +7,5 @@ http://timeago.yarp.com/
 http://stackoverflow.com/questions/3801324/rails-3-time-ago-in-words-says-about-2-hours-ago
 
 
-
+http://traz.github.io/post/2013/III-A-datepicker-for-BS3/
 http://js2coffee.org/

@@ -13,6 +13,8 @@
 
 <%= f.input :name, autofocus: true %>
 <%= f.input :description %>   
+<%= f.input :due_on, order: [:month, :day, :year],:as => :date, :input_html => {:class => 'datepicker'} %>
+ 
      
   <div class="form-actions">
     <%= f.button :submit, class: 'btn' %>
