@@ -9,3 +9,6 @@ http://stackoverflow.com/questions/3801324/rails-3-time-ago-in-words-says-about-
 
 http://traz.github.io/post/2013/III-A-datepicker-for-BS3/
 http://js2coffee.org/
+
+http://stackoverflow.com/questions/5129598/how-to-link-a-folder-with-an-existing-heroku-app
+git remote add heroku git@heroku.com:project.git

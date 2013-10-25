@@ -56,3 +56,6 @@ gem 'jquery-turbolinks'
 group :production do
 	gem 'pg', '~> 0.17.0'
 end
+
+# heroku recommended gem
+gem 'rails_12factor'
