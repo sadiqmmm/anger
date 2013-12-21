@@ -1,1 +1,1 @@
-The Anger App
+The Anger App - Make's you more angry
