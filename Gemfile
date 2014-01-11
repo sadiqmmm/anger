@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 #ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
+gem 'rails', '4.1.0.beta1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -43,9 +43,9 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'puma', '~> 2.6.0'
+gem 'puma', '~> 2.7.1'
 gem 'carrierwave', '~> 0.9.0'
-gem 'devise', '~> 3.1.1'
+gem 'devise', '~> 3.2.2'
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'simple_form', '~> 3.0.0'
 gem 'jquery-turbolinks'
@@ -58,7 +58,7 @@ group :development do
 end
 
 group :production do
-	gem 'pg', '~> 0.17.0'
+	gem 'pg', '~> 0.17.1'
 end
 
 # heroku recommended gem
